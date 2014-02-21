@@ -1,29 +1,15 @@
 var letterScore = function(letter) {
-  var onePoint = ["a", "e", "i", "o", "u", "l", "n", "r", "s", "t"];
-  var twoPoint = ["d", "g"];
-  var threePoint = ["b", "c", "m", "p"];
-  var fourPoint = ["f", "h", "v", "w", "y"];
-  var fivePoint = ["k"];
-  var eightPoint = ["j", "x"];
-  var tenPoint = ["q", "z"];
+  var pts = {};
+  pts.a = pts.e = pts.i = pts.o = pts.u = pts.l = pts.n = pts.r = pts.s = pts.t = 1;
+  pts.d = pts.g = 2;
+  pts.b = pts.c = pts.m = pts.p = 3;
+  pts.f = pts.h = pts.v = pts.w = pts.y = 4;
+  pts.k = 5; 
+  pts.j = pts.x = 8;
+  pts.q = pts.z = 10;
 
-  for (var i = 0; i < 10; i++) {
-    if (letter === onePoint[i]) 
-      return 1;
-    if (letter === twoPoint[i])
-      return 2;
-    if (letter === threePoint[i])
-      return 3;
-    if (letter === fourPoint[i])
-      return 4;
-    if (letter === fivePoint[i])
-      return 5;
-    if (letter === eightPoint[i])
-      return 8;
-    if (letter === tenPoint[i]) {
-      return 10;
-    }
-  }
+ return pts[letter];
+
 };
 
 var totalScore = function(word) {

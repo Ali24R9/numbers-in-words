@@ -1,0 +1,21 @@
+#background {
+  height: 1000px;
+  width: 1000px;
+  background-color: #6600CC;
+  text-align: center;
+}
+.container {
+   height: 1000px;
+   width: 1000px;
+   text-align: center;
+}
+.jumbotron {
+    margin-bottom: 0px;
+/*    background-image: url(../img/jumbotronbackground.jpg);*/
+    background-color: #CCFF33;
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
